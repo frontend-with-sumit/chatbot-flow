@@ -1,0 +1,50 @@
+@import "../../../shared/styles/mixins.scss";
+@import "../../../shared/styles/colors.scss";
+
+.messageNode {
+	background-color: $WHITE;
+	width: 15rem;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	overflow: hidden;
+
+	&.active {
+		outline: 1px solid $PRIMARY_COLOR;
+	}
+
+	& .nodeHeader {
+		background-color: $MESSAGE_PRIMARY;
+		padding: 0.6rem 1rem;
+		@include flexPos($justify: space-between);
+
+		.nodeTitle {
+			@include flexPos;
+		}
+
+		& .nodeTitle > span {
+			font-weight: 700;
+			margin-left: 1rem;
+		}
+
+		p + span {
+			height: 2rem;
+			width: 2rem;
+			border: 1px solid $WHITE;
+			border-radius: 50%;
+			background: $WHITE;
+			@include flexPos;
+		}
+
+		.icon {
+			font-size: 1rem;
+
+			&-whatsapp {
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+	& .nodeContent {
+		padding: 1rem;
+	}
+}

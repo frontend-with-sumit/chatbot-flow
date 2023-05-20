@@ -1,0 +1,49 @@
+@import "../../shared/styles/mixins.scss";
+@import "../../shared/styles/colors.scss";
+
+.settings {
+	width: 100%;
+
+	&-header {
+		padding-bottom: 1rem;
+		@include flexPos;
+
+		.icon {
+			font-size: 1.4rem;
+		}
+
+		p {
+			flex: 1;
+			text-align: center;
+		}
+	}
+
+	&-form {
+		border-top: 2px solid $LIGHT_GRAY;
+		border-bottom: 2px solid $LIGHT_GRAY;
+		padding: 1rem 0;
+
+		& .form-group {
+			display: flex;
+			flex-direction: column;
+
+			label {
+				color: $GRAY;
+				margin-bottom: 1rem;
+			}
+
+			textarea {
+				border-radius: 8px;
+				padding: 0.5rem;
+				font-size: 0.8rem;
+				font-weight: 500;
+
+				&:focus,
+				&:active,
+				&:focus-visible {
+					outline-color: $PRIMARY_COLOR;
+				}
+			}
+		}
+	}
+}

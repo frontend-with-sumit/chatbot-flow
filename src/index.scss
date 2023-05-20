@@ -1,0 +1,37 @@
+@import "./shared/styles/colors.scss";
+
+// GENERAL STYLES
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: $WHITE;
+	color: #333;
+	font-weight: 600;
+	font-family: "Noto Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	min-height: 100vh;
+	height: 100%;
+}
+
+textarea,
+button {
+	font-family: inherit;
+	font-weight: inherit;
+}
+
+p {
+	margin: 0;
+}
+
+.icon {
+	cursor: pointer;
+}

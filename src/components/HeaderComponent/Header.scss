@@ -1,0 +1,43 @@
+@import "../../shared/styles/colors.scss";
+
+.header {
+	height: 4rem;
+	padding: 1rem;
+	background: $LIGHT_GRAY;
+	text-align: right;
+
+	.btn {
+		padding: 0.5rem 1rem;
+		background: $WHITE;
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: all 0.1s ease-in;
+
+		&:disabled {
+			border-color: lighten($GRAY, 30);
+
+			&:hover {
+				background-color: lighten($GRAY, 30);
+				color: $WHITE;
+			}
+		}
+	}
+
+	.btn-outline {
+		&-primary {
+			background-color: transparent;
+			border: 2px solid $PRIMARY_COLOR;
+
+			&:hover {
+				background: $PRIMARY_COLOR;
+				color: $WHITE;
+			}
+
+			&:focus {
+				outline: none;
+				box-shadow: 0 0 0 3px rgba(81, 45, 168, 0.5);
+			}
+		}
+	}
+}

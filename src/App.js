@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import ContextProvider from "./shared/context/Context";
+
+import FlowCanvas from "./components/FlowCanvasComponent/FlowCanvas";
+import Header from "./components/HeaderComponent/Header";
+import NodesPanel from "./components/NodesPanelComponent/NodesPanel";
+import Toast from "./shared/components/ToastComponent/Toast";
+
+import "./App.scss";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="wrapper">
+			<Toast />
+			<ContextProvider>
+				<Header />
+				<main>
+					<div className="content">
+						<div className="canvas">
+							<FlowCanvas />
+						</div>
+						<div className="panel">
+							<NodesPanel />
+						</div>
+					</div>
+				</main>
+			</ContextProvider>
+		</div>
+	);
 }
 
 export default App;
